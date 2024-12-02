@@ -9,6 +9,9 @@ PREREQS
 RUN FOLLOWING SCRIPTS IN ORDER
 1. python setup_database.py > This creates the database schema
 2. python generate_data.py > This populates the database with data
-3. python test_queries.py > Run test queries to validate functionality
 4. python cli.py > Run to interact with the database
+
+QUERIES 
+- Run this script > sqlite3 movie_theater.db
+- You should see the "sqlite3>" prompt. Go ahead and test queries.
 
