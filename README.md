@@ -38,6 +38,7 @@ QUERIES TO TEST!
     LEFT JOIN Seat ON Theater.theater_ID = Seat.theater_ID
     GROUP BY Theater.room
 5. List all the movies being shown on a Friday
+   
    SELECT Movies.title, MovieTime.day
         FROM Movies
         JOIN MovieTime ON Movies.movies_ID = MovieTime.movie_ID
