@@ -20,24 +20,28 @@ RUN FOLLOWING SCRIPTS IN ORDER
   
 QUERIES TO TEST!
 1. List all movies and their genre
+   
    SELECT Movies.title, Genre.genre_name
         FROM Movies
         JOIN Genre ON Movies.genre_ID = Genre.genre_ID
-2. List all customers with a Premium Membership
+3. List all customers with a Premium Membership
+   
    SELECT Customer.name, Membership.membership_name
         FROM Customer
         JOIN Membership ON Customer.membership_ID = Membership.membership_ID
         WHERE Membership.membership_name = 'Premium'
-3. List all employees earning above $15.00
+4. List all employees earning above $15.00
+   
    SELECT Employee.name, Employee.position, Employee.wage
         FROM Employee
         WHERE Employee.wage > 15.00
-4. Get all theaters and the number of seats in each theater
+5. Get all theaters and the number of seats in each theater
+   
    SELECT Theater.room, COUNT(Seat.seat_number) AS total_seats
     FROM Theater
     LEFT JOIN Seat ON Theater.theater_ID = Seat.theater_ID
     GROUP BY Theater.room
-5. List all the movies being shown on a Friday
+6. List all the movies being shown on a Friday
    
    SELECT Movies.title, MovieTime.day
         FROM Movies
