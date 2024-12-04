@@ -70,10 +70,11 @@ def update_movie_start_time():
     cursor = conn.cursor()
     try:
         movie_id = input("Enter the movie ID to update start time: ")
+        day = input("Enter day of movie time: ")
         new_start_time = input("Enter the new start time: ")
         cursor.execute(
-            "UPDATE MovieTime SET start_time = ? WHERE movie_ID = ?",
-            (new_start_time, movie_id)
+            "UPDATE MovieTime SET start_time = ? WHERE movie_ID = ? AND day = ?",
+            (new_start_time, movie_id, day)
         )
         conn.commit()
         print("Movie start time updated!")
