@@ -1,7 +1,7 @@
 # Movie-Theater-DataBase-Project
 
 PREREQS
-- Python > 3.12
+- Python 3.12 or higher
 - SQLite3
 - Pandas
    - If on Windows, open terminal > pip install pandas
@@ -12,7 +12,7 @@ RUN FOLLOWING SCRIPTS IN ORDER
 1. RUN the script > python setup_database.py
    - This will create the database schema. After running this script, you should see that movie_theater.db has been created in your solution explorer.
 2. RUN the script > python generate_data.py
-   - This will populate the database with data. You should see data inserted for each table in the console.
+   - This will put data into the database from Excel file. You should see data inserted for each table in the console.
 3. RUN the script > sqlite3 movie_theater.db
    - This is where we want you guys to test the five queries we have made(check for queries below). You will see a "sqlite>" prompt. Follow with typing in queries.
 4. RUN the script > python cli.py
